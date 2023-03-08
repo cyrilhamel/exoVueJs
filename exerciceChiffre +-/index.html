@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo - +</title>
+</head>
+<body>
+    <!-- <div id="monApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center"> <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button v-on:click="soustraire(40)" type="button" class="btn btn-danger">-</button> <h3 class="mx-3">le nombre : {{leNombre}}</h3>
+        <button v-on:click="ajouter(22)"type="button" class="btn btn-success">+</button>
+          </div>
+        </div> -->
+
+        <div id="monApp" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button v-on:click.left="soustraire(10)" type="button" class="btn btn-danger">-</button>
+                <h3 class="mx-3">le nombre : {{leNombre}}</h3>
+                <!-- Les modifiers du click permttent de réagir au click Gauche et Droit spécifiquement -->
+                <button v-on:click.right="ajouter(20)" type="button" class="btn btn-success">+</button>
+                <button v-on:click.left="capterEventClick($event)" type="button" class="btn btn-info">test</button>
+                <!-- le modifier prevent pour empecher l'envoi automatique du formulaire -->
+                <form v-on:submit.prevent>
+                    <input v-on:input="capterEventInput($event)" type="text" />
+                    <button>Envoyer</button>
+                </form>
+                <h3 class="mx-3">{{uneString}}</h3>
+            </div>
+        </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
