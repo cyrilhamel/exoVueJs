@@ -6,7 +6,7 @@ data() {
     return{
         image:'image/mario.jpg',
         nom : 'mario',
-        age : '36',
+        age : 36,
     };
 },
 //! Dans cet Object methods, on va écrire nos fonctions
@@ -16,7 +16,7 @@ methods: {
         
     },
     agePlus(){
-        return this.age+10;
+        return this.age +10;
     }
 
 },

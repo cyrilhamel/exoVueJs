@@ -10,11 +10,16 @@
     <h1>TP DataBinding - Profile User</h1>
 <div class="profile">
     <img v-bind:src="image" alt="image de profile">
+    <br>
     <span>{{nom}}</span>
-    <input type="text"v-model="nom" >
+    <br>
+    <input type="text"v-model="nom">
+    <br>
     <span>{{age}}</span>
+    <br>
     <span>{{agePlus()}}</span>
-
+<br>
+<span>{{nbrFetich()}}</span>
 </div>
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
