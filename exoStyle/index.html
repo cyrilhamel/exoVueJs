@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo Style</title>
+</head>
+<body>
+    <div id="monApp">
+        <div class="row row-cols-1 row-cols-md-3 g-4 m-3 justify-content-center">
+        <div class="col">
+            <div class="card" @click="selectionCard(1)" :style="{backgroundColor: selectCard1 ==true ? 'red':'aqua' }">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" @click="selectionCard(2)" :style="{backgroundColor: selectCard2 ? 'green':'violet' }">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Ici on a rangé plusieurs modif dans un objet que l'on binder directement -->
+        <div :style="styleObject">Cool</div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>

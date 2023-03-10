@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="monApp" class="container mt-4 mb-4 p-3">
+        <div class="mb-3">
+          <button v-on:click="augmenter(20)" type="button" class="btn btn-success mt-3">+</button>
+          <button v-on:click.left="reduire(10)" type="button" class="btn btn-danger mt-3">-</button>
+        </div>
+        <div class="mb-3">
+          <!-- Sans computed properties -->
+          <p>{{afficherNameUser}}</p>
+          <!-- Avec computed properties (on fait juste référence à la fonction) -->
+          <!-- <p>{{afficherNameUser}}</p> -->
+    
+        </div>
+        <div class="mb-3">
+         <p>{{leNombre}}</p>
+        </div>
+      </div>
+      <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>

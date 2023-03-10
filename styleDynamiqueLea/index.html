@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleDynLéa</title>
+</head>
+<body>
+    <div id="monApp">
+        <input v-model="text1" v-on:keyup="changeClass" type="text">
+        <p v-bind:class="text1">Hello world</p>
+
+        <input v-model="text2" type="text">
+        <p v-bind:style="{ backgroundColor: text2 }">Couleur de fond</p>
+
+        <button v-on:click="affichage">Masquer 1er paragraphe</button>
+    </div>
+
+    <style>
+        .hello {
+            background-color: mediumslateblue;
+            color: white;
+            font-weight: bold;
+        }
+        .world {
+            background-color: chartreuse;
+            color: purple;
+            font-style: italic;
+        }
+    </style>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>

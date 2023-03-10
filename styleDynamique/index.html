@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Dynamique</title>
+</head>
+<body>
+    <div id="monApp">
+        <div class="m-3">
+        <div>
+            <input v-model="nomClasse" type="text" class="form-control" />
+            <!-- <h1 :class="{maClasseHello: nomClasse==='hello'}"  class="form-label mt-1">Hello World (class dynamique)</h1> -->
+            <!-- version en passant par une fonction computed -->
+            <h1 :class="classDynamique" class="form-label mt-1">
+            Hello World (class dynamique)
+            </h1>
+        </div>
+        <div class="mb-3">
+            <input v-model="laCouleur" type="text" class="form-control" />
+            <h1 :style="{backgroundColor: laCouleur}" class="form-label mt-1">
+            Hello World (couleur dynamique)
+            </h1>
+        </div>
+        <div class="mb-3 form-check"></div>
+        <button @click="affichage" class="btn btn-primary">
+            Afficher 1er Titre
+        </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+</body>
+</html>
