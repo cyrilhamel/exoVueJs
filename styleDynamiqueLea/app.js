@@ -1,25 +1,25 @@
 const app = Vue.createApp({
     data() {
         return {
-            laClasse: '',
-            text1: '',
-            text2: '',
+            nomClasse: '',
+            laCouleur: '',
             visible: true
         }
     },
     computed: {
-        changeClass() {
-            if(this.text1 === 'hello'){
-                this.laClasse = 'hello';
-            }else if(this.text1 === 'world'){
-                this.laClasse = 'world';
+        classDynamique() {
+            return{
+              hello: this.nomClasse ==='hello',
+              world: this.nomClasse ==='world',
+              hidden: !this.visible,
+              visible: this.visible
             }
         }
     },
     methods: {
         affichage() {
             this.visible = !this.visible;
-        }        
+        }
     }
 });
 

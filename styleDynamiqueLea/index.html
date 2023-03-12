@@ -8,11 +8,11 @@
 </head>
 <body>
     <div id="monApp">
-        <input v-model="text1" v-on:keyup="changeClass" type="text">
-        <p v-bind:class="text1">Hello world</p>
+        <input v-model="nomClasse" v-on:keyup="changeClass" type="text">
+        <p v-bind:class="classDynamique">Hello world</p>
 
-        <input v-model="text2" type="text">
-        <p v-bind:style="{ backgroundColor: text2 }">Couleur de fond</p>
+        <input v-model="laCouleur" type="text">
+        <p v-bind:style="{ backgroundColor: laCouleur }">Couleur de fond</p>
 
         <button v-on:click="affichage">Masquer 1er paragraphe</button>
     </div>
@@ -27,6 +27,12 @@
             background-color: chartreuse;
             color: purple;
             font-style: italic;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
         }
     </style>
 
